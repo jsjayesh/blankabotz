@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="50px" viewBox="0 0 74 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>7152E0FF-7C7E-4AD0-8B52-4535F0B862ED</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="26.7521677%" y1="50%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#2DB1EC" offset="0%"></stop>
+            <stop stop-color="#D9F0F8" stop-opacity="0.0847486413" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="26.7521677%" y1="50%" x2="100%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#2DB1EC" offset="0%"></stop>
+            <stop stop-color="#D9F0F8" stop-opacity="0.0847486413" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo">
+            <g id="Group-3">
+                <polygon id="Triangle-2" fill="url(#linearGradient-1)" style="mix-blend-mode: multiply;" points="28.9855596 0 57.9711191 50 0 50"></polygon>
+                <polygon id="Triangle-2" fill="url(#linearGradient-2)" style="mix-blend-mode: multiply;" points="37 0 65.9855596 50 8.01444043 50"></polygon>
+                <polygon id="Triangle-2" fill="url(#linearGradient-2)" style="mix-blend-mode: multiply;" points="45.0144404 0 74 50 16.0288809 50"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

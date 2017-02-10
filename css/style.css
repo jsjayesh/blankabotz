@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "AmericanTypewriter";
+    src: url("fonts/atf.ttf");
+}
+html body{
+  font-family: "AmericanTypewriter";
+  color: #646363;
+  overflow-y: scroll;   
+}
+
+.theme-color{
+     background: #096fd3;
+}
+
+.card .card-action .chip{
+    color: #000!important;
+    font-size: 11px;
+}
+.fixed{
+    position: fixed;
+}
+.pull-right{
+    float: right;
+}
+
+.delCardBtn{
+    float: right;
+    color: #fff;
+    cursor: pointer;
+    color:#d3d3d3 !Important;
+}

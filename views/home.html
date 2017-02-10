@@ -1,0 +1,106 @@
+<div  class="row">
+    
+    <div class="col m3 fixed">
+    <form name="searchForm">
+    <div class="input-field col s12 m12">
+          <i class="material-icons prefix">search</i>
+          <input id="search"  class="validate" ng-model="searchKey" type="text">
+          <label for="search">Search </label>
+        
+    </div>
+    </form>
+    
+    <h3>Products Form</h3>
+    
+    <form ng-hide="editMode" ng-submit="addProducts()" class=" col s12  wow slideInLeft">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="category" type="text" class="validate" ng-model="newProd.category">
+          <label for="category">Category</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input id="type" class="validate" ng-model="newProd.type" type="text">
+          <label for="type">Type</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input id="subtype"  class="validate" ng-model="newProd.subtype" type="text">
+          <label for="subtype">Subtype</label>
+        </div>
+        <div class="input-field col s12">
+            <input class="btn" type="submit" val="submit"/>
+        </div>
+    </form>
+    <form ng-show="editMode" ng-submit="saveProduct(currProduct)" class=" col s12  wow slideInUp">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="category" type="text" class="validate" ng-model="currProduct.category">
+          <label class="active" for="category">Category</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input id="type" class="validate" ng-model="currProduct.type" type="text">
+          <label class="active" for="type">Type</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input id="subtype"  class="validate" ng-model="currProduct.subtype" type="text">
+          <label class="active"  for="subtype">Subtype</label>
+        </div>
+        <input name="id" type="hidden" ng-model="currProduct.id" />
+        <div class="input-field col s12">
+            <input class="btn" type="submit" val="submit"/>
+        </div>
+    </form>
+
+        
+    </div>
+    
+    <div class="col s12 m9 offset-m3" >
+        <div class="row">
+        <div class="col m4" ng-repeat="product in products | filter : searchKey">
+        <div class="wow fadeInUp card  z-depth-3"
+             ng-class="product.category=='Electronix' && 'blue-grey lighten-2'||'green  lighten-2'">
+            
+            <div class="card-content white-text">
+              <div>
+              <span class="card-title">{{product.category}}</span>
+              <span ng-click="delProduct(product)" class="delCardBtn">
+                  <i class="material-icons ">close</i>
+              </span>
+              <span ng-click="editProduct(product)" class="delCardBtn">
+                  <i class="material-icons ">edit</i>
+              </span>
+
+              </div>      
+              <p>
+              type &nbsp;&nbsp;&nbsp;: {{product.type}} <br/>
+              subtype : {{product.subtype}}      
+              </p>
+            </div>
+
+<!--
+            <div class="card-action">
+              <a href="#">
+                  {{product.$id}}
+              </a>
+            </div>
+-->
+            
+       </div>
+            
+       </div>
+      </div>
+<!--
+        <div class="text-black" ng-show="{{products.length==0}}">
+        <i> no records found ...</i>
+        </div>
+-->
+
+    </div>
+
+    
+
+</div>
+            
