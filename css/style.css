@@ -5,9 +5,10 @@
 html body{
   font-family: "AmericanTypewriter";
   color: #646363;
-  overflow-y: scroll;   
+    height: 100%;
+    width: 100%;
+/*    overflow-y:hidden;*/
 }
-
 .theme-color{
      background: #096fd3;
 }
@@ -19,8 +20,10 @@ html body{
 .fixed{
     position: fixed;
 }
-.pull-right{
-    float: right;
+@media only screen and (max-width: 720px) {
+    .fixed {
+        position: relative;
+    }
 }
 
 .delCardBtn{

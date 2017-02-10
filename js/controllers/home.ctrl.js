@@ -34,6 +34,10 @@ fpApp.controller("homeCtrl",["$scope","$window","$http","$firebaseArray",functio
     };
     
     $scope.editProduct = function(product){
+
+        var myEl = angular.element( document.querySelector( '#'+product.$id ) );
+        myEl.addClass('z-depth-5');
+        
         $scope.editMode = true;
         console.log(product);
         $scope.currProduct.category = product.category;  
@@ -53,6 +57,9 @@ fpApp.controller("homeCtrl",["$scope","$window","$http","$firebaseArray",functio
           .then(function(ref) {
             $scope.editMode = false;
       });
+        var myEl = angular.element( document.querySelector( '#'+cproduct.id ) );
+        myEl.removeClass('z-depth-5');
+        
     };
 }]);
 

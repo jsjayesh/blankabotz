@@ -1,6 +1,6 @@
 <div  class="row">
     
-    <div class="col m3 fixed">
+    <div class="col s12 m3 fixed">
     <form name="searchForm">
     <div class="input-field col s12 m12">
           <i class="material-icons prefix">search</i>
@@ -12,7 +12,7 @@
     
     <h3>Products Form</h3>
     
-    <form ng-hide="editMode" ng-submit="addProducts()" class=" col s12  wow slideInLeft">
+    <form ng-hide="editMode" ng-submit="addProducts()" class="hide-on-small-only col s12  wow slideInLeft">
         <div class="input-field col s12">
           <i class="material-icons prefix">account_circle</i>
           <input id="category" type="text" class="validate" ng-model="newProd.category">
@@ -49,19 +49,30 @@
           <label class="active"  for="subtype">Subtype</label>
         </div>
         <input name="id" type="hidden" ng-model="currProduct.id" />
-        <div class="input-field col s12">
+        <div class="input-field col s6">
             <input class="btn" type="submit" val="submit"/>
         </div>
+        <div class="input-field col s6">
+            <span class="btn btn-flat" ng-click="editMode=false" >
+                Cancel
+            </span>
+        </div>
+            
     </form>
 
         
     </div>
     
     <div class="col s12 m9 offset-m3" >
+        <p ng-show="">
+            <i>showing {{products.length}} / {{products.length}}</i>
+        </p>
         <div class="row">
-        <div class="col m4" ng-repeat="product in products | filter : searchKey">
-        <div class="wow fadeInUp card  z-depth-3"
-             ng-class="product.category=='Electronix' && 'blue-grey lighten-2'||'green  lighten-2'">
+        <div class="col m4 s6" ng-repeat="product in products | filter : searchKey">
+        <div class="wow fadeInUp card  z-depth-2 lighten-2"
+             ng-class="product.category=='Electronix' && 'green'||'blue-grey'"
+             id="{{product.$id}}"
+             >
             
             <div class="card-content white-text">
               <div>
